@@ -1,0 +1,58 @@
+#COUNT THE NUMBER OF VOWELS IN A STRING
+count=0
+str1 = "CSEIT"
+str2 = "AEIOU"
+for i in str1:
+    if i in str2: 
+             count = count + 1
+        
+print(count)
+
+
+#COUNT THE NUMBER OF A PARTICULAR CHARACTER IN A STRING
+count=0
+A=input("Enter the alphabet in capital to search")
+str1 = "hi here barroni"
+for i in str1:
+    if i in A: 
+             count = count + 1
+        
+print(count)
+
+#CHANGE THE PARTICULAR VARIABLE WITH A PARTICULAR VARIABLE
+count=0
+A=input("Enter the alphabet you want to replace ")
+B=input("Enter the alphabet you want to replace IT WITH ")
+str1 = "hi there barronni"
+for i in range (0,len(str1)):
+    if (str1[i] in A): 
+            #change_char(str1,i,B[0])
+            str1=str1[:i]+B+str1[i+1:]
+
+        
+print(str1)    
+
+
+#WRITE  A PROGRAME TO REMOVE PUNCTUATIONS FROM A GIVEN STRING
+punctuations = "'~!@#$%^&<?>:"{},./';[]
+my_str = "Hello !!!@#@!# , he saud --- and went , "
+no_punct=""
+for c in str1:
+    if  c not in punctuations:
+        no_punct = no_punct + char1
+print(no_punct)    
+
+
+#WRITE A PROGRAME TO REVERSE A STRING
+str1 = 'MADAM'
+str1 = str1.casefold()
+str2 = reversed(str1)
+if list(str1) == list(str2):
+   print("The string is palindrome")
+else:
+   print("The string is palindrome")
+
+
+
+
+

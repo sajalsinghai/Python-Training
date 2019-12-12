@@ -1,0 +1,102 @@
+
+class A:
+    def disp(self):
+        print("Python")
+A1=A()
+A1.disp()        
+Python
+y
+class A:
+    def __init__(self,a,b):
+        self.x=a
+        self.y=b
+    def disp(self):
+        print(self.x+self.y)
+a = A(12,23)
+a.disp()
+​
+​
+35
+class EMP:
+
+    def __init__(self,id1,name1,sal):
+        self.id1=id1
+        self.name1=name1
+        self.sal=sal
+    def display(self):
+        print(str(self.id1)+" "+self.name1+" "+str(self.sal))
+a1=EMP(12,"UMAID",200000)
+a1.display()
+class EMP:
+​
+    def __init__(self,id1,name1,sal):
+        self.id1=id1
+        self.name1=name1
+        self.sal=sal
+    def display(self):
+        print(str(self.id1)+" "+self.name1+" "+str(self.sal))
+a1=EMP(12,"UMAID",200000)
+a1.display()
+        
+12 UMAID 200000
+class EMP:
+    def read(self):
+        self.id1=int(input("Enter the id "))
+        self.name1=input("Enter the name")
+        self.sal1=int(input("Enter the salary "))
+ 
+    def display(self):
+        print(str(self.id1)+" "+self.name1+" "+str(self.sal1))
+a1=EMP()
+a2=EMP()
+a1.read()
+a2.read()
+a1.display()
+a2.display()
+class EMP:
+    def read(self):
+        self.id1=int(input("Enter the id "))
+        self.name1=input("Enter the name")
+        self.sal1=int(input("Enter the salary "))
+ 
+    def display(self):
+        print(str(self.id1)+" "+self.name1+" "+str(self.sal1))
+a1=EMP()
+a2=EMP()
+a1.read()
+a2.read()
+a1.display()
+a2.display()
+Enter the id 12
+Enter the nameumaid
+Enter the salary 213213
+Enter the id 21
+Enter the nametuluku
+Enter the salary 123213
+12 umaid 213213
+21 tuluku 123213
+.
+class EMP:
+    def read(self):
+        self.rollno1=int(input("Enter the id "))
+        self.name1=input("Enter the name")
+        self.marks1=float(input("Enter the data structure "))
+        self.marks2=float(input("Enter the oops"))
+        self.marks3=float(input("Enter the python "))
+    def average(self):
+        self.average=(self.marks1+self.marks2+self.marks3)/3
+    def display(self):
+        print(str(self.rollno1)+" "+self.name1+" "+str(self.average))
+a1=EMP()
+#a2=EMP()
+a1.read()
+a1.average()
+#a2.read()
+a1.display()
+#a2.display()
+Enter the id 12
+Enter the nameumaid
+Enter the data structure 78
+Enter the oops89
+Enter the python 78
+12 umaid 81.66666666666667

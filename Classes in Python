@@ -100,3 +100,45 @@ Enter the data structure 78
 Enter the oops89
 Enter the python 78
 12 umaid 81.66666666666667
+
+
+
+
+
+class BANK:
+    def read(self):
+        self.Account1=int(input("enter the account no"))
+        self.cusnam=input("Enter the name")
+        #self.marks1=float(input("Enter the data structure "))
+        #self.marks2=float(input("Enter the oops"))
+        self.bal=float(input("Enter the balance "))
+    def deposit(self):
+        self.depo=float(input("Enter the amount to be  deposited"))
+        self.bal=self.bal+self.depo
+        print("New balance is "+str(self.bal))
+    def withdraw(self):
+        self.withe=float(input("Enter the ampunt to be wiodthdawed"))
+        if (self.bal-self.withe<=500):
+            print("Sorry the limit amount is reached and you can not witdharw")
+        else:
+            self.bal=sel.bal-self.withe
+            print("New balance is "+str(self.bal))
+
+    def disp(self):
+        print(str(self.Account1)+" "+self.cusnam+" "+str(self.bal))
+
+a1=BANK()
+a1.read()
+a1.disp()
+a1.deposit()
+a1.withdraw()
+#a2.display()
+
+enter the account no123                                                                                                         
+Enter the nametuluku                                                                                                            
+Enter the balance 1000                                                                                                          
+123 tuluku 1000.0 
+Enter the amount to be  deposited1000                                                                                           
+New balance is 2000.0                                                                                                           
+Enter the ampunt to be wiodthdawed1500                                                                                          
+Sorry the limit amount is reached and you can not witdharw

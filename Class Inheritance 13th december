@@ -1,0 +1,26 @@
+class a:
+    def disp(self):
+        print("a")
+class b(a):
+    def disp1(self):
+        print("b")
+b1=b()
+b1.disp1()
+b1.disp()
+
+
+class a:
+    def geta(self):
+        self.a=int(input("Enter a"))
+class b(a):
+    def getb(self):
+        self.b=int(input("Enter b"))
+    def add(self):
+        print("Sum is "+str(self.a+self.b))
+b1=b()
+b1.geta()
+b1.getb()
+b1.add()
+
+          
+          

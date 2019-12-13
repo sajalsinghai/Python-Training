@@ -1,0 +1,257 @@
+Jupyter Notebook
+Untitled14
+Last Checkpoint: an hour ago
+(autosaved)
+Current Kernel Logo
+Python 3 
+File
+Edit
+View
+Insert
+Cell
+Kernel
+Widgets
+Help
+
+students=['umaid','tuluku','priyansh']
+marks=[69,20,70]
+age=[19,20,19]
+dict={'names':students,'marks':marks,'age':age}
+dict
+df = pp.DataFrame(data=dict,columns=['names','marks','age'])
+df
+
+students=['umaid','tuluku','priyansh']
+marks=[69,20,70]
+age=[19,20,19]
+dict={'names':students,'marks':marks,'age':age}
+dict
+df = pp.DataFrame(data=dict,columns=['names','marks','age'])
+df
+​
+names	marks	age
+0	umaid	69	19
+1	tuluku	20	20
+2	priyansh	70	19
+df.plot()
+​
+<matplotlib.axes._subplots.AxesSubplot at 0x748cb10>
+
+df1=df[['marks','names']]
+print(df1)
+df1.plot()
+   marks     names
+0     69     umaid
+1     20    tuluku
+2     70  priyansh
+<matplotlib.axes._subplots.AxesSubplot at 0x74d1bd0>
+
+d1=df[(df['marks']>=69) & (df['age']>18)][['names','age']]
+print(d1)
+d1.plot()
+​
+      names  age
+0     umaid   19
+2  priyansh   19
+<matplotlib.axes._subplots.AxesSubplot at 0x853ce30>
+
+d1=df[(df['names']=="umaid")][['names','age']]
+print(d1)
+d1.plot()
+   names  age
+0  umaid   19
+<matplotlib.axes._subplots.AxesSubplot at 0x8602310>
+
+stud_data=pp.read_csv("C:\\trees.csv")
+stud_data.columns
+stud=stud_data[(stud_data["Hours_Studied"]>4)&(stud_data['Test_Grade']>76)]
+stud.plot()
+​
+​
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+<ipython-input-91-55fe1535ba7b> in <module>()
+----> 1 stud_data=pp.read_csv("C:\\trees.csv")
+      2 stud_data.columns
+      3 stud=stud_data[(stud_data["Hours_Studied"]>4)&(stud_data['Test_Grade']>76)]
+      4 stud.plot()
+      5 
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, escapechar, comment, encoding, dialect, tupleize_cols, error_bad_lines, warn_bad_lines, skipfooter, skip_footer, doublequote, delim_whitespace, as_recarray, compact_ints, use_unsigned, low_memory, buffer_lines, memory_map, float_precision)
+    707                     skip_blank_lines=skip_blank_lines)
+    708 
+--> 709         return _read(filepath_or_buffer, kwds)
+    710 
+    711     parser_f.__name__ = name
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in _read(filepath_or_buffer, kwds)
+    447 
+    448     # Create the parser.
+--> 449     parser = TextFileReader(filepath_or_buffer, **kwds)
+    450 
+    451     if chunksize or iterator:
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in __init__(self, f, engine, **kwds)
+    816             self.options['has_index_names'] = kwds['has_index_names']
+    817 
+--> 818         self._make_engine(self.engine)
+    819 
+    820     def close(self):
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in _make_engine(self, engine)
+   1047     def _make_engine(self, engine='c'):
+   1048         if engine == 'c':
+-> 1049             self._engine = CParserWrapper(self.f, **self.options)
+   1050         else:
+   1051             if engine == 'python':
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in __init__(self, src, **kwds)
+   1693         kwds['allow_leading_cols'] = self.index_col is not False
+   1694 
+-> 1695         self._reader = parsers.TextReader(src, **kwds)
+   1696 
+   1697         # XXX
+
+pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader.__cinit__()
+
+pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._setup_parser_source()
+
+FileNotFoundError: File b'C:\\trees.csv' does not exist
+
+tlib inline
+%matplotlib inline
+​
+​
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+<ipython-input-90-04a5ae887051> in <module>()
+----> 1 stud_data=pp.read_csv("C:\\trees.csv")
+      2 stud_data.columns
+      3 
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in parser_f(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, escapechar, comment, encoding, dialect, tupleize_cols, error_bad_lines, warn_bad_lines, skipfooter, skip_footer, doublequote, delim_whitespace, as_recarray, compact_ints, use_unsigned, low_memory, buffer_lines, memory_map, float_precision)
+    707                     skip_blank_lines=skip_blank_lines)
+    708 
+--> 709         return _read(filepath_or_buffer, kwds)
+    710 
+    711     parser_f.__name__ = name
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in _read(filepath_or_buffer, kwds)
+    447 
+    448     # Create the parser.
+--> 449     parser = TextFileReader(filepath_or_buffer, **kwds)
+    450 
+    451     if chunksize or iterator:
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in __init__(self, f, engine, **kwds)
+    816             self.options['has_index_names'] = kwds['has_index_names']
+    817 
+--> 818         self._make_engine(self.engine)
+    819 
+    820     def close(self):
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in _make_engine(self, engine)
+   1047     def _make_engine(self, engine='c'):
+   1048         if engine == 'c':
+-> 1049             self._engine = CParserWrapper(self.f, **self.options)
+   1050         else:
+   1051             if engine == 'python':
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py in __init__(self, src, **kwds)
+   1693         kwds['allow_leading_cols'] = self.index_col is not False
+   1694 
+-> 1695         self._reader = parsers.TextReader(src, **kwds)
+   1696 
+   1697         # XXX
+
+pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader.__cinit__()
+
+pandas/_libs/parsers.pyx in pandas._libs.parsers.TextReader._setup_parser_source()
+
+FileNotFoundError: File b'C:\\trees.csv' does not exist
+
+file_errors_location = 'C:\\trees1.xlsx'
+stud_data=pp.read_excel(file_errors_location)
+stud_data
+stud=stud_data[(stud_data["Volume(ft^3)"]>20)]
+stud.plot()
+---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\indexes\base.py in get_loc(self, key, method, tolerance)
+   2524             try:
+-> 2525                 return self._engine.get_loc(key)
+   2526             except KeyError:
+
+pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+
+pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+
+pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+KeyError: 'Volume(ft^3)'
+
+During handling of the above exception, another exception occurred:
+
+KeyError                                  Traceback (most recent call last)
+<ipython-input-89-a5de0798cca2> in <module>()
+      2 stud_data=pp.read_excel(file_errors_location)
+      3 stud_data
+----> 4 stud=stud_data[(stud_data["Volume(ft^3)"]>20)]
+      5 stud.plot()
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\frame.py in __getitem__(self, key)
+   2137             return self._getitem_multilevel(key)
+   2138         else:
+-> 2139             return self._getitem_column(key)
+   2140 
+   2141     def _getitem_column(self, key):
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\frame.py in _getitem_column(self, key)
+   2144         # get column
+   2145         if self.columns.is_unique:
+-> 2146             return self._get_item_cache(key)
+   2147 
+   2148         # duplicate columns & possible reduce dimensionality
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\generic.py in _get_item_cache(self, item)
+   1840         res = cache.get(item)
+   1841         if res is None:
+-> 1842             values = self._data.get(item)
+   1843             res = self._box_item_values(item, values)
+   1844             cache[item] = res
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals.py in get(self, item, fastpath)
+   3841 
+   3842             if not isna(item):
+-> 3843                 loc = self.items.get_loc(item)
+   3844             else:
+   3845                 indexer = np.arange(len(self.items))[isna(self.items)]
+
+C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\indexes\base.py in get_loc(self, key, method, tolerance)
+   2525                 return self._engine.get_loc(key)
+   2526             except KeyError:
+-> 2527                 return self._engine.get_loc(self._maybe_cast_indexer(key))
+   2528 
+   2529         indexer = self.get_indexer([key], method=method, tolerance=tolerance)
+
+pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+
+pandas/_libs/index.pyx in pandas._libs.index.IndexEngine.get_loc()
+
+pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+pandas/_libs/hashtable_class_helper.pxi in pandas._libs.hashtable.PyObjectHashTable.get_item()
+
+KeyError: 'Volume(ft^3)'
+
+import xlrd
+​
+workbook
+workbook = xlrd.open_workbook('C:\\trees1.xlsx')
+workbook
+<xlrd.book.Book at 0x3ec0650>
+print(workbook)
+<xlrd.book.Book object at 0x03EC0650>
+​
